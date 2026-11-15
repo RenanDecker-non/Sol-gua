@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Laboratório educacional de refração, energia solar e robótica para uma piscina aquecida.">
+
+  <title>Sol + Água — Laboratório de ideias</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#principal">Pular para o conteúdo</a>
+
+  <header>
+    <a class="brand" href="#inicio">
+      <span class="brand-icon" aria-hidden="true">◒</span>
+      sol<span>+</span>água
+      <small>LABORATÓRIO DE IDEIAS</small>
+    </a>
+
+    <nav aria-label="Menu principal">
+      <a href="#ciencia">A ciência</a>
+      <a href="#laboratorio">Laboratório</a>
+      <a href="#robotica">Robótica</a>
+      <a href="#impacto">Impacto</a>
+    </nav>
+
+    <button id="access"
+            aria-expanded="false"
+            aria-controls="access-panel">
+      Aa <span>Acessibilidade</span>
+    </button>
+  </header>
+
+  <aside id="access-panel"
+         hidden
+         aria-label="Ajustes de acessibilidade">
+    <h2>Seu jeito de explorar</h2>
+
+    <button id="contrast" aria-pressed="false">
+      Alto contraste
+    </button>
+
+    <button id="reading" aria-pressed="false">
+      Leitura facilitada
+    </button>
+
+    <button id="size">Aumentar texto</button>
+
+    <button id="motion" aria-pressed="false">
+      Reduzir movimento
+    </button>
+
+    <p>
+      Leitura facilitada usa Arial, espaçamento ampliado e linhas
+      mais curtas. Nenhuma fonte atende todas as pessoas com dislexia.
+    </p>
+  </aside>
+
+  <main id="principal">
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">
+          <span></span> CIÊNCIA QUE ACONTECE NA PRÁTICA
+        </p>
+
+        <h1>
+          Um mergulho<br>
+          na ciência.<br>
+          <em>Movido a sol.</em>
+        </h1>
+
+        <p class="lead">
+          O que acontece quando a luz encontra a água?
+          Explore a refração, descubra a energia solar e programe
+          uma piscina mais inteligente.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="#laboratorio">
+            Explorar o laboratório
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="text-link" href="#ciencia">
+            Entender o projeto ↓
+          </a>
+        </div>
+
+        <p class="hero-note">
+          INTERATIVO · GRATUITO · FEITO PARA APRENDER
+        </p>
+      </div>
+
+      <figure class="hero-art">
+        <svg viewBox="0 0 600 560"
+             role="img"
+             aria-labelledby="hero-title hero-desc">
+          <title id="hero-title">
+            O encontro do sol com a piscina
+          </title>
+
+          <desc id="hero-desc">
+            Um raio solar atravessa a superfície da água e muda
+            de direção, aproximando-se da normal.
+          </desc>
+
+          <defs>
+            <pattern id="tiles"
+                     width="44"
+                     height="34"
+                     patternUnits="userSpaceOnUse">
+              <path d="M44 0H0V34"
+                    fill="none"
+                    stroke="#57a9ae"
+                    stroke-width="1"/>
+            </pattern>
+
+            <linearGradient id="water" x2="0" y2="1">
+              <stop stop-color="#7bd9d8"/>
+              <stop offset="1" stop-color="#168a99"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="435" cy="107" r="54" fill="#f5b83e"/>
+
+          <g stroke="#f5b83e" stroke-width="3">
+            <path d="M435 25V7M435 207V189M353 107H335M535 107H517
+                     M377 49L364 36M493 165L506 178
+                     M493 49L506 36M377 165L364 178"/>
+          </g>
+
+          <path d="M45 280L340 188L562 310L267 416Z"
+                fill="#f4eee2"/>
+          <path d="M68 284L340 207L537 313L267 391Z"
+                fill="#09565f"/>
+          <path d="M68 304L340 227L537 333L267 411Z"
+                fill="url(#water)"/>
+          <path d="M68 304L340 227L537 333L267 411Z"
+                fill="url(#tiles)"/>
+          <path d="M45 280L267 402L562 310V381L267 478L45 354Z"
+                fill="#e4ded0"/>
+          <path d="M45 280L267 402V478L45 354Z"
+                fill="#f3ecde"/>
+          <path d="M267 402L562 310V381L267 478Z"
+                fill="#c7d7cf"/>
+
+          <path d="M394 153L283 282L311 364"
+                stroke="#ffe8a0"
+                stroke-width="7"
+                fill="none"/>
+          <path d="M283 226V370"
+                stroke="#174f55"
+                stroke-dasharray="5 6"
+                fill="none"/>
+
+          <circle cx="283" cy="282" r="8" fill="#fff4c7"/>
+
+          <path d="M107 321Q136 309 164 323
+                   M345 332Q377 320 406 331
+                   M211 353Q235 345 255 354"
+                stroke="#c1f0e7"
+                stroke-width="3"
+                fill="none"/>
+
+          <text x="51" y="205" fill="#19545a" font-size="15">
+            LUZ → ÁGUA → DESCOBERTA
+          </text>
+        </svg>
+
+        <figcaption>
+          <span class="dot"></span>
+          PROJETO PISCINA AQUECIDA
+          <span>01 / EXPLORAR</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <div class="discipline">
+      <span>TRÊS ÁREAS. UMA DESCOBERTA.</span>
+      <a href="#programacao">01 / Programação ↗</a>
+      <a href="#ciencia">02 / Tecnociência ↗</a>
+      <a href="#robotica">03 / Robótica ↗</a>
+    </div>
+
+    <section id="ciencia">
+      <div class="section-top">
+        <p class="eyebrow">01 — ENTENDA O FENÔMENO</p>
+        <span>DO RAIO DE LUZ AO CALOR</span>
+      </div>
+
+      <div class="section-heading">
+        <h2>
+          A luz muda de caminho.<br>
+          A energia transforma.
+        </h2>
+
+        <p>
+          Uma piscina é um laboratório a céu aberto.
+          Mas refração e aquecimento são fenômenos diferentes —
+          e os dois fazem parte desta história.
+        </p>
+      </div>
+
+      <div class="science-grid">
+        <article>
+          <span class="number">01</span>
+          <h3>Refração da luz</h3>
+
+          <p>
+            Ao passar do ar para a água, a luz muda de velocidade
+            e, quando chega inclinada, de direção. Na água, o raio
+            se aproxima da normal: a linha perpendicular à superfície.
+          </p>
+
+          <p class="formula">n₁ sen θ₁ = n₂ sen θ₂</p>
+
+          <small>
+            Lei de Snell · ângulos medidos em relação à normal.
+          </small>
+        </article>
+
+        <article>
+          <span class="number">02</span>
+          <h3>Absorção e calor</h3>
+
+          <p>
+            A energia solar absorvida pela água, pelo fundo e pelos
+            coletores pode aumentar a temperatura. Refração, sozinha,
+            não gera calor. Parte da luz também é refletida.
+          </p>
+
+          <p class="formula">Q = m · c · ΔT</p>
+
+          <small>
+            Água: c ≈ 4.186 J/(kg·°C). Aquecer exige energia.
+          </small>
+        </article>
+
+        <article>
+          <span class="number">03</span>
+          <h3>Tecnologia com propósito</h3>
+
+          <p>
+            Coletores solares aquecem a água; sensores acompanham
+            as temperaturas e um controlador decide quando circular
+            água. Uma cobertura ajuda a reduzir perdas, sobretudo
+            por evaporação.
+          </p>
+
+          <a href="#robotica">Conhecer a automação ↗</a>
+        </article>
+      </div>
+
+      <details>
+        <summary>
+          Por que o fundo da piscina parece mais próximo?
+        </summary>
+
+        <p>
+          Os raios que saem da água se afastam da normal.
+          Ao prolongá-los mentalmente em linha reta, percebemos
+          uma imagem mais rasa. Perto da observação perpendicular,
+          profundidade aparente ≈ profundidade real / 1,333.
+          Essa aproximação não vale para qualquer ângulo.
+        </p>
+      </details>
+    </section>
+
+    <section class="lab" id="laboratorio">
+      <div class="section-top">
+        <p class="eyebrow">02 — EXPERIMENTE E DESCUBRA</p>
+        <span>LABORATÓRIO INTERATIVO</span>
+      </div>
+
+      <div class="section-heading">
+        <h2>
+          Mude o ângulo.<br>
+          Veja a ciência acontecer.
+        </h2>
+
+        <p>
+          Você controla o experimento. Observe o caminho da luz
+          e compare o que acontece em cada meio.
+        </p>
+      </div>
+
+      <div class="experiment">
+        <div class="diagram">
+          <div class="diagram-label">
+            EXPERIMENTO 01 <span>REFRAÇÃO</span>
+          </div>
+
+          <svg id="rayDiagram"
+               viewBox="0 0 600 400"
+               role="img"
+               aria-labelledby="rayTitle rayDesc">
+            <title id="rayTitle">Simulador da lei de Snell</title>
+            <desc id="rayDesc">
+              Diagrama atualizado pelos controles ao lado.
+            </desc>
+
+            <rect width="600" height="200" fill="#f0f1e8"/>
+            <rect y="200" width="600" height="200" fill="#97d5d7"/>
+
+            <path d="M0 200H600" stroke="#17616b"/>
+            <path d="M300 25V380"
+                  stroke="#4b6d70"
+                  stroke-dasharray="6 7"/>
+
+            <path id="incoming" stroke="#9b6100" stroke-width="5"/>
+            <path id="outgoing" stroke="#07515c" stroke-width="5"/>
+
+            <circle cx="300" cy="200" r="6" fill="#152f32"/>
+
+            <text x="24" y="38">AR · n ≈ 1,000</text>
+            <text id="mediumLabel" x="24" y="370">
+              ÁGUA · n ≈ 1,333
+            </text>
+            <text x="310" y="35">normal</text>
+          </svg>
+
+          <p>
+            Representação esquemática.
+            Não mostra a intensidade da reflexão.
+          </p>
+        </div>
+
+        <div class="controls">
+          <p class="eyebrow">SUA BANCADA</p>
+          <h3>Para onde vai a luz?</h3>
+
+          <label for="angle">
+            Ângulo de incidência
+            <output id="angleValue">45°</output>
+          </label>
+
+          <input id="angle"
+                 type="range"
+                 min="0"
+                 max="80"
+                 value="45">
+
+          <div class="range-label">
+            <span>0° · perpendicular</span>
+            <span>80° · rasante</span>
+          </div>
+
+          <label for="medium">Meio de destino</label>
+
+          <select id="medium">
+            <option value="1.333">Água — n = 1,333</option>
+            <option value="1.5">Vidro — n = 1,500</option>
+            <option value="1">Ar — n = 1,000</option>
+          </select>
+
+          <div class="result" role="status" aria-live="polite">
+            <span>ÂNGULO DE REFRAÇÃO</span>
+            <strong id="refraction">32,0°</strong>
+            <p id="rayText"></p>
+          </div>
+
+          <button class="outline" id="reset">
+            ↺ Reiniciar experimento
+          </button>
+        </div>
+      </div>
+
+      <div class="heat">
+        <div>
+          <p class="eyebrow">EXPERIMENTO 02 — ENERGIA SOLAR</p>
+          <h3>Quanto a piscina pode aquecer?</h3>
+
+          <p>
+            Estimativa idealizada para 10.000 litros de água,
+            área coletora de 10 m², irradiância constante
+            de 800 W/m² e rendimento de 60%.
+          </p>
+
+          <label for="hours">
+            Tempo de sol:
+            <output id="hoursValue">4 horas</output>
+          </label>
+
+          <input id="hours"
+                 type="range"
+                 min="1"
+                 max="8"
+                 value="4">
+
+          <label class="check">
+            <input id="loss" type="checkbox" checked>
+            Comparar com perda ilustrativa de 30% da energia útil
+          </label>
+        </div>
+
+        <div class="heat-results" aria-live="polite">
+          <p>SEM PERDAS <strong id="ideal"></strong></p>
+          <p>COM PERDAS <strong id="real"></strong></p>
+
+          <small>
+            Variação de temperatura, não temperatura final.
+            Modelo didático; clima, evaporação e equipamento
+            alteram o resultado real.
+          </small>
+        </div>
+      </div>
+    </section>
+
+    <section id="robotica">
+      <div class="section-top">
+        <p class="eyebrow">03 — DA DESCOBERTA À SOLUÇÃO</p>
+        <span>ROBÓTICA APLICADA</span>
+      </div>
+
+      <div class="section-heading">
+        <h2>
+          Uma piscina que<br>
+          toma boas decisões.
+        </h2>
+
+        <p>
+          Proposta de automação solar: circular água apenas quando
+          o coletor estiver mais quente que a piscina e houver
+          necessidade de aquecimento.
+        </p>
+      </div>
+
+      <div class="robot-grid">
+        <div>
+          <h3>Teste o controlador</h3>
+
+          <label for="pool">
+            Piscina:
+            <output id="poolValue"></output>
+          </label>
+
+          <input id="pool"
+                 type="range"
+                 min="15"
+                 max="35"
+                 value="24">
+
+          <label for="collector">
+            Coletor:
+            <output id="collectorValue"></output>
+          </label>
+
+          <input id="collector"
+                 type="range"
+                 min="15"
+                 max="65"
+                 value="40">
+
+          <label class="check">
+            <input type="checkbox" id="level" checked>
+            Nível de água adequado
+          </label>
+
+          <div id="pump" class="pump" role="status"></div>
+        </div>
+
+        <article>
+          <p class="eyebrow">SENSORES → LÓGICA → AÇÃO</p>
+          <h3>Como funcionaria?</h3>
+
+          <ol>
+            <li>
+              Sensores medem a piscina e o coletor;
+              uma chave verifica o nível.
+            </li>
+            <li>
+              A bomba liga com diferença ≥ 5 °C
+              e piscina abaixo de 28 °C.
+            </li>
+            <li>
+              Desliga com diferença ≤ 2 °C,
+              meta atingida ou nível inadequado.
+            </li>
+          </ol>
+
+          <p>
+            Entre 2 e 5 °C, mantém o estado anterior:
+            essa histerese evita ligações e desligamentos repetidos.
+          </p>
+
+          <p class="notice">
+            Demonstração digital, sem conexão com equipamento.
+            Uma instalação real exige projeto profissional
+            e proteção elétrica adequada ao ambiente molhado.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="programacao" class="code-section">
+      <p class="eyebrow">04 — POR TRÁS DO EXPERIMENTO</p>
+
+      <h2>
+        Feito com código.<br>
+        Aberto à curiosidade.
+      </h2>
+
+      <div class="code-grid">
+        <p>
+          <strong>HTML</strong> organiza títulos, controles
+          e regiões da página.
+          <strong>CSS</strong> cria a identidade Sol + Água
+          e adapta o layout.
+          <strong>JavaScript</strong> calcula os resultados
+          e atualiza os simuladores.
+        </p>
+
+        <pre><code>// Lei de Snell, em JavaScript
+const rad = graus * Math.PI / 180;
+const seno = n1 * Math.sin(rad) / n2;
+const angulo = Math.asin(seno) * 180 / Math.PI;</code></pre>
+      </div>
+
+      <p>
+        Desafio para a turma: registre os resultados para
+        0°, 30° e 60°. O ângulo de refração cresce na mesma
+        proporção? Explique usando a lei de Snell.
+      </p>
+    </section>
+
+    <section id="impacto">
+      <p class="eyebrow">05 — CIÊNCIA QUE INCLUI</p>
+
+      <div class="section-heading">
+        <h2>
+          Mais conhecimento.<br>
+          Menos desperdício.
+        </h2>
+
+        <p>
+          Automação, energia solar e acesso à informação podem
+          caminhar juntos. Uma solução sustentável também precisa
+          ser compreendida por quem a utiliza.
+        </p>
+      </div>
+
+      <div class="science-grid">
+        <article>
+          <h3>Medir antes de afirmar</h3>
+
+          <p>
+            Compare energia consumida, temperatura e tempo
+            de uso antes e depois da automação. Economia real
+            precisa de dados; este site não promete uma
+            porcentagem de redução.
+          </p>
+        </article>
+
+        <article>
+          <h3>Aprender sem barreiras</h3>
+
+          <p>
+            Controles por teclado, resultados em texto,
+            alto contraste e ajustes de leitura estão disponíveis.
+            Use Tab para navegar e as setas para ajustar
+            os simuladores.
+          </p>
+        </article>
+
+        <article>
+          <h3>Espaço para Libras</h3>
+
+          <p>
+            O tradutor VLibras está integrado e depende de internet.
+            A tradução automática não substitui uma revisão humana.
+          </p>
+
+          <details>
+            <summary>
+              Vídeos em Libras — estrutura preparada
+            </summary>
+
+            <p>
+              Vídeos ainda não produzidos. Esta área está reservada
+              para vídeos com intérprete, legendas e transcrição.
+              Roteiro: apresentação do projeto, lei de Snell
+              e uso dos simuladores.
+            </p>
+          </details>
+        </article>
+      </div>
+
+      <details>
+        <summary>Glossário rápido</summary>
+
+        <p>
+          <strong>Normal:</strong> linha perpendicular à superfície.
+          <strong>Irradiância:</strong> potência solar por área.
+          <strong>Índice de refração:</strong> relação entre
+          a velocidade da luz no vácuo e no meio.
+          <strong>Histerese:</strong> limites diferentes
+          para ligar e desligar.
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#inicio">sol+água</a>
+
+    <p>
+      Um laboratório de ciência, tecnologia e possibilidades.<br>
+      Projeto educacional · modelos didáticos, sem medições reais.
+    </p>
+
+    <nav aria-label="Mapa do site">
+      <h2>Mapa do site</h2>
+      <a href="#inicio">Início</a>
+      <a href="#ciencia">Ciência</a>
+      <a href="#laboratorio">Simuladores</a>
+      <a href="#robotica">Robótica</a>
+      <a href="#programacao">Programação</a>
+      <a href="#impacto">Impacto e inclusão</a>
+    </nav>
+
+    <div>
+      <h2>Fontes e método</h2>
+
+      <a href="https://openstax.org/books/college-physics-2e/pages/25-3-the-law-of-refraction">
+        OpenStax · Lei da refração
+      </a>
+
+      <a href="https://openstax.org/books/college-physics-2e/pages/14-2-temperature-change-and-heat-capacity">
+        OpenStax · Calor e capacidade térmica
+      </a>
+
+      <a href="https://www.vlibras.gov.br/doc/widget/installation/webpageintegration.html">
+        Documentação VLibras
+      </a>
+
+      <p>
+        Acessibilidade é um processo: a validação com pessoas
+        com deficiência e os vídeos em Libras ainda são
+        etapas pendentes.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Tradutor automático VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script
+    src="https://vlibras.gov.br/app/vlibras-plugin.js"
+    defer
+    onload="if(window.VLibras)new window.VLibras.Widget('https://vlibras.gov.br/app')">
+  </script>
+</body>
+</html>
